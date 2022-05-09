@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <script language="JavaScript" src="script.js"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Player | CodingNepal</title>
@@ -10,7 +13,15 @@
 <body>
   <div class="wrapper">
     <div class="top-bar">
-      <button type="submit" id="search" class="material-icons">queue_music</button>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Music list</button>
+          <div id="mydropdown" class="dropdown-content">
+            <a href="#1">string1</a>
+            <a href="#2">string2</a>
+            <a href="#3">string3</a>
+          </div>
+        </div>
+
       <span>Now Playing</span>
       <input id="search" ></input>
     </div>
@@ -28,5 +39,7 @@
         <button type="button" id="repeat-plist" class="material-icons" title="Playlist looped">repeat</button>
     </div>
   </div>
+
+
 </body>
 </html>
