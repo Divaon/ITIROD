@@ -21,47 +21,68 @@
     outline: 1vh solid red;
 }
 
+
+@media screen and (min-width: 1280px) and (max-width: 4000px)  {
+
+
 body{
   display: flex;
   align-items: center;
   justify-content:center;
-  min-width: 10vh;
-  max-height: 50vh;
-  min-width: 50vh;
-  margin-top: 10vh;
+  min-width: 300px;
+  max-height: 400px;
+  min-width: 400px;
+  margin-top: 300px;
 }
-.wrapper{
-  width: 50vh;
-  padding: 0.5vw 0.6vw;
+div.wrapper{
+  width: 500px;
+  padding: 5px 6px;
   overflow: hidden;
   position: relative;
-  border-radius: 0.5vw;
+  border-radius: 5px;
   background: var(--white);
-  box-shadow: 0vw 0.5vw 0.5vw var(--black);
+  box-shadow: 0px 5px 5px var(--black);
 }
-.wrapper i{
+div.wrapper i{
   cursor: pointer;
   justify-content: center;
 }
 
-.song-details{
+div.adm{
+  width: 200px;
+  padding: 2px 3px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2.5px;
+  background: var(--white);
+  box-shadow: 0px 2.5px 2.5px var(--black);
+}
+
+div.admbutons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+div.song-details{
     text-align: center;
-    margin: 2vw 0;
+    margin: 30px 0;
   }
-  .song-details p{
+  div.song-details p{
     color: var(--lightblack);
   }
-  .song-details .name{
-    font-size: 0.7vw;
+  div.song-details .name{
+    font-size: 35px;
   }
 
   .img-area{
     width: 100%;
-    height: 20vw;
+    height: 400px;
     overflow: hidden;
-    margin-top: 2vw;
-    border-radius: 1vw;
-    box-shadow: 0vw 0.5vw 0.7vw var(--lightbshadow);
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 7px var(--lightbshadow);
   }
   .img-area img{
     width: 100%;
@@ -69,13 +90,13 @@ body{
     object-fit: cover;
   }
 
-  .top-bar{
+  div.top-bar{
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .top-bar input{
-      width: 15%;
+  div.top-bar input{
+      width: 30%;
   }
 
   .controls{
@@ -85,14 +106,14 @@ body{
   }
 
   .dropbtn {
-    padding: 0.2vw;
-    font-size: 1vw;
+    padding: 10px;
+    font-size: 30px;
     border: none;
     cursor: pointer;
 }
 
 
-.dropdown {
+div.dropdown {
     position: relative;
     display: inline-block;
     background-color: #cecaca;
@@ -104,19 +125,156 @@ body{
     background-color: #515C6F;
     display: none;
     position: absolute;
-    min-width: 1vw;
+    min-width: 10px;
     overflow: auto;
     right: 0;
     z-index: 1;
 }
 
-.dropdown-content a {
+div.dropdown-content a {
     color: #000;
-    padding: 0.5vw 1vw;
+    padding: 5px 10px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown a:hover {background-color: #ffcbdd;}
+button.musiccontrlole
+{
+  width: 60px;
+  height: 60px;
+}
+
+div.dropdown a:hover {background-color: #ffcbdd;}
 
 .show {display: block;}
+
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 1279px)  {
+
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    min-width: 100px;
+    max-height: 200px;
+    min-width: 200px;
+    margin-top: 200px;
+  }
+  div.wrapper{
+    width: 200px;
+    padding: 2px 3px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2.5px;
+    background: var(--white);
+    box-shadow: 0px 2.5px 2.5px var(--black);
+  }
+
+  div.adm{
+    width: 100px;
+    padding: 2px 3px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2.5px;
+    background: var(--white);
+    box-shadow: 0px 2.5px 2.5px var(--black);
+  }
+
+  div.admbutons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  div.wrapper i{
+    cursor: pointer;
+    justify-content: center;
+  }
+  
+  div.song-details{
+      text-align: center;
+      margin: 15px 0;
+    }
+    div.song-details p{
+      color: var(--lightblack);
+    }
+    div.song-details .name{
+      font-size: 17.5px;
+    }
+  
+    .img-area{
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 2.5px 3.5px var(--lightbshadow);
+    }
+    .img-area img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    div.top-bar{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    div.top-bar input{
+        width: 30%;
+    }
+  
+    .controls{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .dropbtn {
+      padding: 5px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+  }
+  
+  
+  div.dropdown {
+      position: relative;
+      display: inline-block;
+      background-color: #cecaca;
+      cursor: pointer;
+  }
+  
+  .dropdown-content {
+      box-shadow: #515C6F;
+      background-color: #515C6F;
+      display: none;
+      position: absolute;
+      min-width: 5px;
+      overflow: auto;
+      right: 0;
+      z-index: 1;
+  }
+  
+  div.dropdown-content a {
+      color: #000;
+      padding: 2.5px 5px;
+      text-decoration: none;
+      display: block;
+  }
+  
+  button.musiccontrlole
+  {
+    width: 30px;
+    height: 3S0px;
+  }
+  
+  div.dropdown a:hover {background-color: #ffcbdd;}
+  
+  .show {display: block;}
+  
+  }

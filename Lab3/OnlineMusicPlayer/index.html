@@ -5,13 +5,21 @@
   <script language="JavaScript" src="script.js"></script>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width/;lkjhg, initial-scale=1.0">
   <title>Music Player | CodingNepal</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
   <div class="wrapper">
+
+    <div class="admbutons">
+      <button type="button" class="musiccontrlole" onclick="window.location.href='loginpage.html'">Log</button>
+      <button type="button" class="musiccontrlole" onclick="window.location.href='rigisterpage.html'">Register</button>
+      <p id="nameuser">Current user</p>
+    </div>
+
+
     <div class="top-bar">
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Music list</button>
@@ -33,10 +41,10 @@
       <p class="artist">Sabaton</p>
     </div>
     <div class="controls">
-        <button type="button" id="prev" class="material-icons">skip_previous</button>
-        <button type="button" id="puase" class="material-icons play">play_arrow</button>
-        <button type="button" id="next" class="material-icons">skip_next</button>
-        <button type="button" id="repeat-plist" class="material-icons" title="Playlist looped">repeat</button>
+        <button type="button" id="prev" class="material-icons musiccontrlole">skip_previous</button>
+        <button type="button" id="puase" class="material-icons play musiccontrlole">play_arrow</button>
+        <button type="button" id="next" class="material-icons musiccontrlole">skip_next</button>
+        <button type="button" id="repeat-plist" class="material-icons musiccontrlole" title="Playlist looped">repeat</button>
     </div>
   </div>
 
