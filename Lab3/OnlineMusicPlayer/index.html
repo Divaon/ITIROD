@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 
-  <script language="JavaScript" src="script.js"></script>
+  
+
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width/;lkjhg, initial-scale=1.0">
@@ -14,31 +15,38 @@
   <div class="wrapper">
 
     <div class="admbutons">
-      <button type="button" class="musiccontrlole" onclick="window.location.href='loginpage.html'">Log</button>
-      <button type="button" class="musiccontrlole" onclick="window.location.href='rigisterpage.html'">Register</button>
-      <p id="nameuser">Current user</p>
+      <a href="loginpage.html" >Log</a>
+      <a href='rigisterpage.html' >Register</a>
+      <p class="name" id="nameuser">Current user</p>
     </div>
 
 
     <div class="top-bar">
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Music list</button>
-          <div id="mydropdown" class="dropdown-content">
-            <a href="#1">string1</a>
-            <a href="#2">string2</a>
-            <a href="#3">string3</a>
+      <i id="more-music" class="material-icons">queue_music</i>  
+      
+      <div class="music-list">
+        <div class="header">
+          <div class="row">
+            <i class= "list material-icons">queue_music</i>
+            <span>Music list</span>
           </div>
+          <i id="close" class="material-icons">close</i>
         </div>
+        <ul>
+          <!--music list from js -->
+        </ul>
+      </div>
+
 
       <span>Now Playing</span>
-      <input id="search" ></input>
+      <input id="search" conм ></input>
     </div>
     <div class="img-area">
       <img src="images/DQBBAtuUEAIcZuL.jpg" alt="">
     </div>
     <div class="song-details">
-      <p class="name">Eye of the storm</p>
-      <p class="artist">Sabaton</p>
+      <p class="name">t</p>
+      <p class="artist">t</p>
     </div>
     <div class="controls">
         <button type="button" id="prev" class="material-icons musiccontrlole">skip_previous</button>
@@ -46,8 +54,22 @@
         <button type="button" id="next" class="material-icons musiccontrlole">skip_next</button>
         <button type="button" id="repeat-plist" class="material-icons musiccontrlole" title="Playlist looped">repeat</button>
     </div>
+
+
+
+
   </div>
+
+  <script language="JavaScript" src="script.js">
+  </script>
+  <script language="JavaScript" src="music-list.js"></script>
+
+
 
 
 </body>
 </html>
+
+
+
+

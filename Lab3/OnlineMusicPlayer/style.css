@@ -22,7 +22,7 @@
 }
 
 
-@media screen and (min-width: 1280px) and (max-width: 4000px)  {
+@media screen and (min-width: 901px) and (max-width: 4000px)  {
 
 
 body{
@@ -63,6 +63,8 @@ div.admbutons{
   align-items: center;
   justify-content: space-between;
 }
+
+
 
 
 div.song-details{
@@ -113,6 +115,27 @@ div.song-details{
 }
 
 
+.music-list{
+  position: absolute;
+  background: var(--white);
+  width: 100%;
+  left: 0;
+  bottom: -55%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+  transition: all 0.15s ease-out;
+}
+.music-list.show{
+  bottom: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
 div.dropdown {
     position: relative;
     display: inline-block;
@@ -131,7 +154,7 @@ div.dropdown {
     z-index: 1;
 }
 
-div.dropdown-content a {
+div.music-list a {
     color: #000;
     padding: 5px 10px;
     text-decoration: none;
@@ -148,133 +171,198 @@ div.dropdown a:hover {background-color: #ffcbdd;}
 
 .show {display: block;}
 
+.music-list ul{
+  margin: 10px 0;
+  max-height: 260px;
+  overflow: auto;
+}
+.music-list ul::-webkit-scrollbar{
+  width: 0px;
+}
+.music-list ul li{
+  list-style: none;
+  display: flex;
+  cursor: pointer;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  color: var(--lightblack);
+  border-bottom: 1px solid #E5E5E5;
+}
+.music-list ul li:last-child{
+  border-bottom: 0px;
+}
+.music-list ul li .row span{
+  font-size: 17px;
+}
+.music-list ul li .row p{
+  opacity: 0.9;
+}
+ul li .audio-duration{
+  font-size: 16px;
+}
+ul li.playing{
+  pointer-events: none;
+  color: var(--violet);
 }
 
 
-@media screen and (min-width: 300px) and (max-width: 1279px)  {
+}
 
 
-  body{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    min-width: 100px;
-    max-height: 200px;
-    min-width: 200px;
-    margin-top: 200px;
-  }
-  div.wrapper{
-    width: 200px;
-    padding: 2px 3px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 2.5px;
-    background: var(--white);
-    box-shadow: 0px 2.5px 2.5px var(--black);
-  }
 
-  div.adm{
-    width: 100px;
-    padding: 2px 3px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 2.5px;
-    background: var(--white);
-    box-shadow: 0px 2.5px 2.5px var(--black);
-  }
+  @media screen and (min-width: 0px) and (max-width: 900px){
 
-  div.admbutons{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 
-  div.wrapper i{
-    cursor: pointer;
-    justify-content: center;
-  }
+    body{
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      width: 80%;
+      height: 80%;
+      max-width: 720px;
+      max-height: 720px;
+      margin-top: 50px;
+    }
+    div.wrapper{
+      width: 80%;
+      padding: 2px 3px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 2.5px;
+      background: var(--white);
+      box-shadow: 0px 2.5px 2.5px var(--black);
+    }
   
-  div.song-details{
+    div.adm{
+      width: 100%;
+      padding: 2px 3px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 2.5px;
+      background: var(--white);
+      box-shadow: 0px 2.5px 2.5px var(--black);
+    }
+  
+    div.admbutons{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10px;
+    }
+  
+    div.wrapper i{
+      cursor: pointer;
+      justify-content: center;
+    }
+    
+    div.song-details{
       text-align: center;
-      margin: 15px 0;
+      margin: 30px 0;
     }
     div.song-details p{
       color: var(--lightblack);
     }
     div.song-details .name{
-      font-size: 17.5px;
+      font-size: 21px;
     }
-  
-    .img-area{
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-      margin-top: 15px;
-      border-radius: 10px;
-      box-shadow: 0px 2.5px 3.5px var(--lightbshadow);
+    div.song-details .artist{
+      font-size: 18px;
+      opacity: 0.9;
+      line-height: 35px;
     }
-    .img-area img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    
+      .img-area{
+        width: 100%;
+        height: 40%;
+        overflow: hidden;
+        margin-top: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 2.5px 3.5px var(--lightbshadow);
+      }
+      .img-area img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    
+      div.top-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      div.top-bar input{
+          width: 30%;
+      }
+    
+      .controls{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    
+      .dropbtn {
+        padding: 5px;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
     }
-  
-    div.top-bar{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    
+    
+    div.dropdown {
+        position: relative;
+        display: inline-block;
+        background-color: #cecaca;
+        cursor: pointer;
     }
-    div.top-bar input{
-        width: 30%;
+    
+    .dropdown-content {
+        box-shadow: #515C6F;
+        background-color: #515C6F;
+        display: none;
+        position: absolute;
+        min-width: 5px;
+        overflow: auto;
+        right: 0;
+        z-index: 1;
     }
-  
-    .controls{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    
+    div.dropdown-content a {
+        color: #000;
+        padding: 2.5px 5px;
+        text-decoration: none;
+        display: block;
     }
-  
-    .dropbtn {
-      padding: 5px;
-      font-size: 15px;
-      border: none;
-      cursor: pointer;
-  }
-  
-  
-  div.dropdown {
-      position: relative;
-      display: inline-block;
-      background-color: #cecaca;
-      cursor: pointer;
-  }
-  
-  .dropdown-content {
-      box-shadow: #515C6F;
-      background-color: #515C6F;
-      display: none;
+    
+    button.musiccontrlole
+    {
+      width: 20%;
+      height: 15%;
+    }
+    
+    div.dropdown a:hover {background-color: #ffcbdd;}
+    
+    .show {display: block;}
+
+
+    .music-list{
       position: absolute;
-      min-width: 5px;
-      overflow: auto;
-      right: 0;
-      z-index: 1;
-  }
-  
-  div.dropdown-content a {
-      color: #000;
-      padding: 2.5px 5px;
-      text-decoration: none;
-      display: block;
-  }
-  
-  button.musiccontrlole
-  {
-    width: 30px;
-    height: 3S0px;
-  }
-  
-  div.dropdown a:hover {background-color: #ffcbdd;}
-  
-  .show {display: block;}
-  
-  }
+      background: var(--white);
+      width: 100%;
+      left: 0;
+      bottom: -55%;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 5;
+      padding: 8px 15px;
+      border-radius: 15px;
+      box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+      transition: all 0.15s ease-out;
+    }
+    .music-list.show{
+      bottom: 0;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    
+    }
